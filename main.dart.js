@@ -83028,7 +83028,7 @@ p=A.c([B.ET,B.dI,A.cf("Sube tu archivo .STL",g,g,g,p==null?g:p.bk(B.k),g,g),B.f4
 if(h.e)B.b.T(p,A.c([B.dI,B.BM],o))
 n=h.d
 if(n!=null&&!h.e)B.b.T(p,A.c([B.dI,A.cf("Archivo seleccionado: "+n,g,g,g,B.R9,g,g)],o))
-f=A.c([f,B.f5,A.dW(g,A.hM(p,B.ai,B.an,B.ax),B.v,g,g,new A.dG(s.ax.k2,g,q,r,g,g,B.b0),g,g,g,g,B.E4,g,g,g),B.f5,A.ta(A.c([A.cf("Cantidad de piezas (Pares): ",g,g,g,B.z7,g,g),A.Jd(g,g,B.ER,g,g,new A.afD(h),g,g,g),A.cf(""+h.r,g,g,g,B.Q6,g,g),A.Jd(g,g,B.EO,g,g,new A.afE(h),g,g,g)],o),B.ai,B.hq,B.ax)],o)
+f=A.c([f,B.f5,A.dW(g,A.hM(p,B.ai,B.an,B.ax),B.v,g,g,new A.dG(s.ax.k2,g,q,r,g,g,B.b0),g,g,g,g,B.E4,g,g,g),B.f5,A.ta(A.c([A.cf("Cantidad de piezas (Pares): ",g,g,g,B.z7,g,g),A.Jd(g,g,B.ER,g,g,new A.afD(h),g,g,g),A.cf(""+h.r,g,g,g,B.Q6,g,g),A.Jd(g,g,B.EP,g,g,new A.afE(h),g,g,g)],o),B.ai,B.hq,B.ax)],o)
 if(h.f!=null){s=A.V(a)
 r=A.dV(16)
 q=A.Xw(B.G,B.r,1)
@@ -83144,7 +83144,7 @@ A.xA.prototype={
 al(){var s=t.A
 return new A.Q3(new A.bm(null,s),new A.bm(null,s),new A.bm(null,s))}}
 A.Q3.prototype={
-M(a){var s=this,r=null,q=s.d,p=s.e,o=A.V(a),n=t.D,m=A.c([new A.If(new A.dG(A.aF(B.c.aI(25.5),B.G.C()>>>16&255,B.G.C()>>>8&255,B.G.C()&255),r,r,r,r,r,B.b0),A.a2d("assets/logopaleta.png",r,40),r),A.apT(B.EN,new A.ahN(s,a),B.TL),A.apT(B.ES,new A.ahO(s,a),B.TO),A.apT(B.EQ,new A.ahP(s,a),B.TS)],n),l=A.aq([null,0],t.LO,t.S)
+M(a){var s=this,r=null,q=s.d,p=s.e,o=A.V(a),n=t.D,m=A.c([new A.If(new A.dG(A.aF(B.c.aI(25.5),B.G.C()>>>16&255,B.G.C()>>>8&255,B.G.C()&255),r,r,r,r,r,B.b0),A.a2d("assets/logopaleta.png",r,40),r),A.apT(B.EO,new A.ahN(s,a),B.TL),A.apT(B.ES,new A.ahO(s,a),B.TO),A.apT(B.EQ,new A.ahP(s,a),B.TS)],n),l=A.aq([null,0],t.LO,t.S)
 return new A.zP(new A.Lm(q,p,r),new A.M5(A.hM(A.c([A.dW(r,B.zU,B.v,r,r,r,r,A.bo(a,r,t.w).w.a.b-60,r,r,r,r,r,r),A.dW(r,B.zK,B.v,r,r,r,r,r,q,r,r,r,r,r),A.dW(r,B.BD,B.v,r,r,r,r,r,p,r,r,r,r,r),A.dW(r,B.LL,B.v,r,r,r,r,r,s.f,r,r,r,r,r)],n),B.ai,B.an,B.ax),r),new A.Ib(o.ax.k2,new A.JF(new A.abL(!0,!0,!0,m,l),B.b2,B.as,!1,r,r,B.zT,!1,r,4,B.av,r,r,B.U,B.aD,r),r),r)}}
 A.ahN.prototype={
 $0(){A.yK(this.b).zl(null)
@@ -83251,13 +83251,13 @@ A.Lm.prototype={
 M(a){return A.aup(new A.a92(this))}}
 A.a92.prototype={
 $2(a,b){var s,r,q,p,o="assets/logopaleta.png",n=null
-if(b.b>768){s=A.a2d(o,B.lQ,40)
+if(b.b>768){s=A.a2d(o,B.lQ,50)
 r=this.a
 q=A.V(a).ok.y
 q=A.acy(A.cf("Nosotros",n,n,n,q==null?n:q.bk(B.k),n,n),new A.a9_(r),n)
 p=A.V(a).ok.y
-return A.asD(A.c([q,B.yG,A.acy(A.cf("Cotizador 3D",n,n,n,p==null?n:p.bk(B.k),n,n),new A.a90(r),n),B.Ok],t.D),!0,B.D,n,0,s)}else{s=A.a2d(o,B.lQ,40)
-return A.asD(A.c([A.Jd(n,n,B.EP,n,n,new A.a91(a),n,n,n)],t.D),!1,B.D,!0,0,s)}},
+return A.asD(A.c([q,B.yG,A.acy(A.cf("Cotizador 3D",n,n,n,p==null?n:p.bk(B.k),n,n),new A.a90(r),n),B.Ok],t.D),!0,B.D,n,0,s)}else{s=A.a2d(o,B.lQ,50)
+return A.asD(A.c([A.Jd(n,n,B.EN,n,n,new A.a91(a),n,n,n)],t.D),!1,B.D,!0,0,s)}},
 $S:520}
 A.a9_.prototype={
 $0(){var s=$.W.a6$.x.h(0,this.a.c)
@@ -87104,11 +87104,11 @@ B.EI=new A.el(58372,"MaterialIcons",!1)
 B.nD=new A.cX(24,0,400,0,48,B.l,1,null,!1)
 B.EL=new A.cX(null,null,null,null,null,B.k,null,null,null)
 B.EM=new A.cX(null,null,null,null,null,B.l,null,null,null)
+B.EN=new A.fI(B.k_,28,B.k,null,null)
 B.EH=new A.el(58172,"MaterialIcons",!1)
-B.EN=new A.fI(B.EH,null,B.G,null,null)
+B.EO=new A.fI(B.EH,null,B.G,null,null)
 B.EB=new A.el(57415,"MaterialIcons",!1)
-B.EO=new A.fI(B.EB,null,B.G,null,null)
-B.EP=new A.fI(B.k_,null,B.k,null,null)
+B.EP=new A.fI(B.EB,null,B.G,null,null)
 B.EF=new A.el(57791,"MaterialIcons",!1)
 B.EQ=new A.fI(B.EF,null,B.G,null,null)
 B.EJ=new A.el(58646,"MaterialIcons",!1)
