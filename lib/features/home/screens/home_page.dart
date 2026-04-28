@@ -75,12 +75,13 @@ class _HomePageState extends State<HomePage> {
                   .animate(onPlay: (controller) => controller.repeat(reverse: true))
                   .scale(begin: const Offset(1, 1), end: const Offset(1.2, 1.2), duration: 800.ms),
               title: const Text('Instagram', style: TextStyle(color: Colors.white)),
-              onTap: () async {
+              onTap: () {
                 Navigator.pop(context);
                 final url = Uri.parse('https://www.instagram.com/nova_lab_print?igsh=MTc4bXpkZnBzMHJjeQ==');
-                if (await canLaunchUrl(url)) {
-                  await launchUrl(url);
-                }
+                launchUrl(
+                  url,
+                  mode: LaunchMode.externalApplication,
+                );
               },
             ),
           ],

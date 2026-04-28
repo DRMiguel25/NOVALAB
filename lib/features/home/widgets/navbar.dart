@@ -59,11 +59,12 @@ class ResponsiveNavBar extends StatelessWidget implements PreferredSizeWidget {
               ),
               const SizedBox(width: 8),
               IconButton(
-                onPressed: () async {
+                onPressed: () {
                   final url = Uri.parse('https://www.instagram.com/nova_lab_print?igsh=MTc4bXpkZnBzMHJjeQ==');
-                  if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
-                  }
+                  launchUrl(
+                    url,
+                    mode: LaunchMode.externalApplication,
+                  );
                 },
                 icon: const Icon(Icons.camera_alt_outlined, color: Colors.white),
                 tooltip: 'Instagram',
