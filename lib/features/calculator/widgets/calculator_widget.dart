@@ -100,6 +100,17 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
                     color: Colors.white,
                   ),
                 ),
+                const SizedBox(height: 8),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    '¿Qué es un .STL? Es el formato estándar para impresión 3D que contiene la geometría tridimensional de tu modelo.',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: Colors.white70,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
                 const SizedBox(height: 24),
                 ElevatedButton(
                   onPressed: pickFile,

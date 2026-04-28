@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import '../widgets/hero_section.dart';
+import '../widgets/animated_hero_section.dart';
 import '../widgets/navbar.dart';
 import '../widgets/about_widget.dart';
 import '../../calculator/widgets/calculator_widget.dart';
+import '../../calculator/widgets/product_description_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,6 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final GlobalKey aboutKey = GlobalKey();
   final GlobalKey calculatorKey = GlobalKey();
+  final GlobalKey descriptionKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -54,15 +58,54 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.description, color: Color(0xFF00FF87)),
+              title: const Text('Describir Idea', style: TextStyle(color: Colors.white)),
+              onTap: () {
+                Navigator.pop(context);
+                Scrollable.ensureVisible(
+                  descriptionKey.currentContext!,
+                  duration: const Duration(milliseconds: 800),
+                  curve: Curves.easeInOut,
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.camera_alt_outlined, color: Color(0xFF00FF87))
+                  .animate(onPlay: (controller) => controller.repeat(reverse: true))
+                  .scale(begin: const Offset(1, 1), end: const Offset(1.2, 1.2), duration: 800.ms),
+              title: const Text('Instagram', style: TextStyle(color: Colors.white)),
+              onTap: () async {
+                Navigator.pop(context);
+                final url = Uri.parse('https://www.instagram.com/nova_lab_print?igsh=MTc4bXpkZnBzMHJjeQ==');
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                }
+              },
+            ),
           ],
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HeroSection(),
+            Container(
+              height: MediaQuery.of(context).size.height - 60, // Subtract AppBar height
+              child: AnimatedHeroSection(
+                onQuotePressed: () {
+                  if (calculatorKey.currentContext != null) {
+                    Scrollable.ensureVisible(
+                      calculatorKey.currentContext!,
+                      duration: const Duration(milliseconds: 800),
+                      curve: Curves.easeInOut,
+                    );
+                  }
+                },
+              ),
+            ),
             Container(key: aboutKey, child: const AboutWidget()),
             Container(key: calculatorKey, child: const CalculatorWidget()),
+            Container(key: descriptionKey, child: const ProductDescriptionWidget()),
           ],
         ),
       ),

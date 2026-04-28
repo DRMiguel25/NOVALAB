@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class ResponsiveNavBar extends StatelessWidget implements PreferredSizeWidget {
   const ResponsiveNavBar({
@@ -22,7 +24,7 @@ class ResponsiveNavBar extends StatelessWidget implements PreferredSizeWidget {
           return AppBar(
             elevation: 0,
             backgroundColor: Colors.transparent,
-            title: Image.asset('assets/logopaleta.png', height: 40, fit: BoxFit.contain),
+            title: Image.asset('assets/logopaleta.png', height: 50, fit: BoxFit.contain),
             actions: [
               TextButton(
                 onPressed: () {
@@ -55,15 +57,28 @@ class ResponsiveNavBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                 ),
               ),
+              const SizedBox(width: 8),
+              IconButton(
+                onPressed: () async {
+                  final url = Uri.parse('https://www.instagram.com/nova_lab_print?igsh=MTc4bXpkZnBzMHJjeQ==');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  }
+                },
+                icon: const Icon(Icons.camera_alt_outlined, color: Colors.white),
+                tooltip: 'Instagram',
+              ).animate(onPlay: (controller) => controller.repeat(reverse: true)).scale(begin: const Offset(1, 1), end: const Offset(1.2, 1.2), duration: 800.ms),
               const SizedBox(width: 16),
             ],
           );
         } else {
           // Mobile layout
           return AppBar(
+            automaticallyImplyLeading: false,
             elevation: 0,
             backgroundColor: Colors.transparent,
-            title: Image.asset('assets/logopaleta.png', height: 40, fit: BoxFit.contain),
+            centerTitle: true,
+            title: Image.asset('assets/logopaleta.png', height: 50, fit: BoxFit.contain),
             actions: [
               IconButton(
                 onPressed: () {
@@ -72,9 +87,9 @@ class ResponsiveNavBar extends StatelessWidget implements PreferredSizeWidget {
                 icon: const Icon(
                   Icons.menu,
                   color: Colors.white,
+                  size: 28,
                 ),
               ),
-              const SizedBox(width: 16),
             ],
           );
         }

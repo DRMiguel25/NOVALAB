@@ -125,8 +125,10 @@ class AboutWidget extends StatelessWidget {
           
           // Values grid
           Wrap(
+            alignment: WrapAlignment.center,
             children: AppConstants.values.map((value) {
-              return Expanded(
+              return Container(
+                constraints: const BoxConstraints(maxWidth: 350),
                 child: _buildValueCard(
                   context,
                   value['title']!,

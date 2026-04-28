@@ -10,8 +10,8 @@ class HeroSection extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
     
     return Container(
-      height: screenHeight * 0.8,
-      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 60),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,12 +32,11 @@ class HeroSection extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 48),
-          ElevatedButton(
-            onPressed: () {
-              // TODO: Navigate to quote page
-            },
-            child: const Text('Cotizar Impresión 3D'),
-          ),
+        ],
+      ),
+    );
+  }
+}
         ],
       ),
     );
